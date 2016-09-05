@@ -28,5 +28,6 @@ Clone de repository
 Use
 -----
 
-  In [1]: import s3_auto_uploader
-  In [2]: s3_auto_uploader.auto_uploader('/full/path', 'bucket', 'folder key')
+    In [1]: import s3_auto_uploader
+
+    In [2]: s3_auto_uploader.auto_uploader('/full/path', 'bucket', 'folder key')
