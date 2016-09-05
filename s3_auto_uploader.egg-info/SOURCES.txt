@@ -1,0 +1,11 @@
+README.rst
+setup.cfg
+setup.py
+s3_auto_uploader/__init__.py
+s3_auto_uploader/s3.py
+s3_auto_uploader/watcher.py
+s3_auto_uploader.egg-info/PKG-INFO
+s3_auto_uploader.egg-info/SOURCES.txt
+s3_auto_uploader.egg-info/dependency_links.txt
+s3_auto_uploader.egg-info/requires.txt
+s3_auto_uploader.egg-info/top_level.txt

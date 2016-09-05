@@ -1,0 +1,45 @@
+Metadata-Version: 1.1
+Name: s3-auto-uploader
+Version: 0.1.0
+Summary: Monitoring folder for a new files and send it to a Amazon S3 bucket
+Home-page: https://github.com/solidarium/s3-auto-uploader
+Author: Olist Developers
+Author-email: developers@olist.com
+License: UNKNOWN
+Description: S3 Auto Uploader
+        ==========================
+        Library to monitoring a specific folder for a new file and send it to a Amazon S3 bucket
+        
+        Usage
+        -----
+            1. Check a folder for changes (New files)
+            2. Send file found to a S3 bucket
+        
+        Requirements
+        ^^^^^^^^^^^^
+        
+            * Python 3.5 or earlier
+            * PIP (Python Instaler Package) - https://pypi.python.org/pypi/pip
+            * AWS credentials (to access sqs/sns at least)
+            * Check the requirements folder at the project root.
+        
+        
+        Installation
+        ------------
+        Clone de repository
+        ::
+        
+            $ git clone git@github.com:solidarium/s3-auto-uploader.git
+        
+            You must have a ssh key to make the clone from this way
+        
+        Setup
+        -----
+        
+Keywords: amazon s3 monitoring watcher filesystem
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Topic :: Software Development :: Libraries

@@ -18,7 +18,7 @@ tests_require = [
     'vcrpy',
 ]
 
-version = "0.0.0"
+version = "0.1.0"
 changes = os.path.join(here, "CHANGES.rst")
 match = r'^#*\s*(?P<version>[0-9]+\.[0-9]+(\.[0-9]+)?)$'
 with codecs.open(changes, encoding='utf-8') as changes:
@@ -52,11 +52,11 @@ class VersionCommand(Command):
 
 
 setup(
-    name='olist-fixtures',
+    name='s3_auto_uploader',
     version=version,
-    description='Generate fixtures for Olist V2 API',
+    description='Monitoring folder for a new files and send it to a Amazon S3 bucket',
     long_description=long_description,
-    url='https://github.com/solidarium/olist-fixtures',
+    url='https://github.com/solidarium/s3-auto-uploader',
     author='Olist Developers',
     author_email='developers@olist.com',
     classifiers=[
