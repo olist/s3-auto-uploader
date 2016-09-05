@@ -24,6 +24,9 @@ Clone de repository
     $ git clone git@github.com:solidarium/s3-auto-uploader.git
 
     You must have a ssh key to make the clone from this way
+    
+    $ cd  s3-auto-uploader
+    $ python setup.py install
 
 Use
 -----
