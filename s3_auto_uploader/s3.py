@@ -7,9 +7,10 @@ from botocore.exceptions import ClientError
 
 class S3Uploader(object):
 
-    def __init__(self, bucket, expires_in=604800):
+    def __init__(self, bucket, folder_key='', expires_in=604800):
         super(S3Uploader, self).__init__()
         self.bucket = bucket
+        self.folder_key = folder_key
         self.expires_in = expires_in
 
     def _get_s3_client_resource(self, config_client=''):
@@ -33,7 +34,9 @@ class S3Uploader(object):
 
     def upload(self, src_path, file_name):
         data_file = open(src_path, 'rb')
-        bucket_key = 'neogrid/{}'.format(file_name)
+        bucket_key = file_name
+        if self.folder_key:
+            bucket_key = '{}/{}'.format(self.folder_key, file_name)
 
         try:
             self._upload_file(data_file, bucket_key)

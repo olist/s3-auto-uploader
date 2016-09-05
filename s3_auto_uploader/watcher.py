@@ -7,10 +7,11 @@ from s3_auto_uploader.s3 import S3Uploader
 
 class FSWatcherEventHandler(FileSystemEventHandler):
 
-    def __init__(self, bucket, patterns=None):
+    def __init__(self, bucket, folder_key='', patterns=None):
         super(FSWatcherEventHandler, self).__init__()
         self.bucket = bucket
         self.patterns = ('xml', 'txt')
+        self.folder_key = folder_key
 
     def on_created(self, event):
         super(FSWatcherEventHandler, self).on_modified(event)
@@ -22,7 +23,8 @@ class FSWatcherEventHandler(FileSystemEventHandler):
             logging.info("Created  %s", event.src_path)
 
             file_name = event.src_path.split('/')[-1]
-            s3_uploader = S3Uploader(bucket=self.bucket)
+            s3_uploader = S3Uploader(bucket=self.bucket,
+                                     folder_key=self.folder_key)
             s3_url = s3_uploader.upload(event.src_path, file_name)
 
             logging.info("File Uploaded.")
