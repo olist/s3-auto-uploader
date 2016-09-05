@@ -28,7 +28,7 @@ Clone de repository
     $ cd  s3-auto-uploader
     $ python setup.py install
 
-Use
+How to use
 -----
 ::
 
